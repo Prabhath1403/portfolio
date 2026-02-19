@@ -53,8 +53,7 @@ Now open [http://localhost:3000](http://localhost:3000) in your browser 🚀
 
 If you’d like to collaborate or just say hi 👋, feel free to reach out!
 
-- 📧 **Email:** [kunjd2803@gmail.com](mailto:kunjd2803@gmail.com)
-- 💼 **LinkedIn:** [linkedin.com/in/kunj-desai-07717b293](https://www.linkedin.com/in/kunj-desai-07717b293/)
+
 
 ---
 
