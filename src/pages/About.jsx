@@ -40,7 +40,8 @@ const AboutMe = () => {
           style={{
             fontSize: "1.9rem",
             marginBottom: "1.2rem",
-            background: "linear-gradient(90deg, var(--accent), var(--accent-2))",
+            background:
+              "linear-gradient(90deg, var(--accent), var(--accent-2))",
             WebkitBackgroundClip: "text",
             color: "transparent",
           }}
@@ -56,7 +57,7 @@ const AboutMe = () => {
             marginBottom: "1rem",
           }}
         >
-          Hi, I’m <strong>Kunj Desai</strong> — an aspiring{" "}
+          Hi, I’m <strong>Prabhath Thummala</strong> — an aspiring{" "}
           <strong>Artificial Intelligence Engineer</strong> and{" "}
           <strong>Machine Learning enthusiast</strong> who loves turning ideas
           into intelligent systems. I’m deeply fascinated by how data and
@@ -73,8 +74,10 @@ const AboutMe = () => {
         </p>
 
         <p>
-            4th-year B.Tech AI Engineering student with hands-on experience in ML & DL Projects. Proficient in Python, scikitlearn,pytorch,tensorflow and data preprocessing. Seeking internship opportunities to apply skills and contribute to
-            impactful AI solutions.
+          2th-year B.Tech AI Engineering student with hands-on experience in ML
+          & DL Projects. Proficient in Python, scikitlearn,pytorch,tensorflow
+          and data preprocessing. Seeking internship opportunities to apply
+          skills and contribute to impactful AI solutions.
         </p>
 
         {/* --- Education Section --- */}
@@ -139,8 +142,8 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>S.C.E.T (Sarvajanik University)</strong> — Surat,
-                  Gujarat
+                  <strong>S.C.E.T (Karunya University)</strong> — Coiambatore,
+                  Tamil Nadu
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
                   4th Year (Pursuing) | GPA: 9.0
@@ -184,13 +187,14 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>R.S.M. Poonawala Experimental School</strong> — Ambika
-                  Niketan, Surat
+                  <strong>Carear Point</strong> — Hyderabad , Telangana
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Gujarat Board | Percentage: 78%
+                  Madhapur | Percentage: 96.5%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2022</p>
+                <p style={{ color: "rgba(255,255,255,0.7)" }}>
+                  Completed in 2022
+                </p>
               </div>
             </motion.div>
 
@@ -229,13 +233,15 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>R.S.M. Poonawala Experimental School</strong> — Surat,
-                  Gujarat
+                  <strong>Hydearabad Public School</strong> — Anantapur, Andhra
+                  Pradesh
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Gujarat Board | Percentage: 69%
+                  State Board | Percentage: 94%
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>Completed in 2020</p>
+                <p style={{ color: "rgba(255,255,255,0.7)" }}>
+                  Completed in 2020
+                </p>
               </div>
             </motion.div>
           </div>

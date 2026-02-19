@@ -9,8 +9,8 @@ import whatsappLogo from "../../public/whatsapp.png";
 import instagramLogo from "../../public/insta.png";
 import facebookLogo from "../../public/facebook.png";
 
-import "../CSS/Contact.css"
-import '../index.css' 
+import "../CSS/Contact.css";
+import "../index.css";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -67,12 +67,32 @@ export default function Contact() {
   };
 
   const quickLinks = [
-    { img: githubLogo, title: "GitHub", link: "https://github.com/kunj2803" },
-    { img: linkedinLogo, title: "LinkedIn", link: "https://www.linkedin.com/in/kunj-desai-07717b293/" },
-    { img: gmailLogo, title: "Email", link: "mailto:kunjd2803@gmail.com" },
-    { img: whatsappLogo, title: "WhatsApp", link: "https://wa.me/+918758209508" },
-    { img: instagramLogo, title: "Instagram", link: "https://www.instagram.com/kunj_2834/" },
-    { img: facebookLogo, title: "Facebook", link: "https://www.facebook.com/kunj.desai.222608" },
+    {
+      img: githubLogo,
+      title: "GitHub",
+      link: "https://github.com/Prabhath1403",
+    },
+    {
+      img: linkedinLogo,
+      title: "LinkedIn",
+      link: "https://www.linkedin.com/in/prabhath-thummala-3aa690326/",
+    },
+    { img: gmailLogo, title: "Email", link: "prabhaththummala@gmail.com" },
+    {
+      img: whatsappLogo,
+      title: "WhatsApp",
+      link: "https://wa.me/+919440073535",
+    },
+    {
+      img: instagramLogo,
+      title: "Instagram",
+      link: "https://www.instagram.com/prabhath_chowdhary/",
+    },
+    {
+      img: facebookLogo,
+      title: "Facebook",
+      link: "https://www.facebook.com/kunj.desai.222608",
+    },
   ];
 
   return (
@@ -92,7 +112,8 @@ export default function Contact() {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="contact-subtitle"
       >
-        Whether it’s a new project, a collaboration, or just to say hi — I’d love to hear from you!
+        Whether it’s a new project, a collaboration, or just to say hi — I’d
+        love to hear from you!
       </motion.p>
 
       {/* Quick Links */}
@@ -130,15 +151,57 @@ export default function Contact() {
         transition={{ delay: 0.4, duration: 0.9 }}
         className="contact-form"
       >
-        <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
-        <input type="text" name="contact" placeholder="Your Email or Phone" value={form.contact} onChange={handleChange} required />
-        <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} required />
-        <textarea name="message" placeholder="Your Message..." value={form.message} onChange={handleChange} rows="5" required />
-        <motion.button type="submit" className="contact-btn" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="contact"
+          placeholder="Your Email or Phone"
+          value={form.contact}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={form.subject}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message..."
+          value={form.message}
+          onChange={handleChange}
+          rows="5"
+          required
+        />
+        <motion.button
+          type="submit"
+          className="contact-btn"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           🚀 Send Message
         </motion.button>
 
-        {status && <motion.p initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} className="contact-status">{status}</motion.p>}
+        {status && (
+          <motion.p
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="contact-status"
+          >
+            {status}
+          </motion.p>
+        )}
       </motion.form>
     </section>
   );
