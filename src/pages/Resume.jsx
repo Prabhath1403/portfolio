@@ -53,16 +53,16 @@ export default function Resume() {
         >
           <div>
             <h3 style={{ fontSize: 24, color: "#00b4ff", marginBottom: 4 }}>
-              👨‍💻 KUNJ D. DESAI
+              👨‍💻 THUMMALA PRABHATH
             </h3>
             <p style={{ margintop: 10, fontSize: 15, color: "#ccc" }}>
-              4th Year B.Tech — AI & Data Science | S.C.E.T, Sarvajanik University
+              2th Year B.Tech — AI & Data Science | Karunya University
             </p>
             <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
-              📍 Jahangirpura, Surat, Gujarat
+              📍 Karunya nagar,Coimbatore,Tamilnadu
             </p>
             <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
-              ✉️ kunjd2803@gmail.com | 📞 +91 8758209508
+              ✉️ prabhaththummala@gmail.com | 📞 +91 9440073535
             </p>
           </div>
 
@@ -80,10 +80,10 @@ export default function Resume() {
           >
             <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
             <p style={{ marginTop: 6, color: "#ccc" }}>
-              4th-year B.Tech AI student experienced in ML, DL, and computer vision.
-              Skilled in Python, TensorFlow, PyTorch, and Scikit-learn. Passionate about
-              building impactful AI systems and seeking opportunities to contribute to
-              real-world AI projects.
+              2th-year B.Tech AI student experienced in ML, DL, and computer
+              vision. Skilled in Python, TensorFlow, PyTorch, and Scikit-learn.
+              Passionate about building impactful AI systems and seeking
+              opportunities to contribute to real-world AI projects.
             </p>
           </motion.div>
         </motion.div>
@@ -104,21 +104,30 @@ export default function Resume() {
           <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
             🎓 Education
           </h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              lineHeight: 1.8,
+            }}
+          >
             <li>
-              <strong>B.Tech in Artificial Intelligence & Data Science</strong> — S.C.E.T
-              (Sarvajanik University), 2022–2026 <br />
+              <strong>B.Tech in Artificial Intelligence & Data Science</strong>{" "}
+              — K.I.T.S (Karunya Institute of Technology and Sciences),
+              2022–2026 <br />
               <span style={{ color: "#aaa" }}>GPA: 9.0</span>
             </li>
             <li style={{ marginTop: 8 }}>
-              <strong>12th Board — R.S.M. Poonawala Experimental School</strong> (Gujarat
-              Board, 2022) <br />
-              <span style={{ color: "#aaa" }}>Percentage: 78%</span>
+              <strong>12th Board — Career point junior college</strong>{" "}
+              (Telangana Board, 2024) <br />
+              <span style={{ color: "#aaa" }}>Percentage: 96.5%</span>
             </li>
             <li style={{ marginTop: 8 }}>
-              <strong>10th Board — Ambika Niketan School</strong> (Gujarat Board, 2020)
+              <strong>10th Board — Hyderabad Public School</strong>{" "}
+              (AndhraPradesh Board, 2022)
               <br />
-              <span style={{ color: "#aaa" }}>Percentage: 85%</span>
+              <span style={{ color: "#aaa" }}>Percentage: 94%</span>
             </li>
           </ul>
         </motion.div>
@@ -130,12 +139,21 @@ export default function Resume() {
           transition={{ delay: 0.8 }}
           style={{ marginTop: 40 }}
         >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>💼 Projects</h4>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: 1.8 }}>
-            <li>1️⃣ Breast Cancer Detection from Mammograms using YOLO & CNN</li>
-            <li>2️⃣ DocuChat: Document Q&A Chatbot (Gemini API)</li>
-            <li>3️⃣ Indian Sign Language Interpreter (In Progress)</li>
-            <li>4️⃣ Mental Health Analyzer</li>
+          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
+            💼 Projects
+          </h4>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              lineHeight: 1.8,
+            }}
+          >
+            <li>1️⃣ Hospital Management</li>
+            <li>2️⃣ Ai finacial Advisor Chatbot </li>
+            <li>3️⃣ Porfolio (In Progress)</li>
+            <li>4️⃣ EnvScope</li>
           </ul>
         </motion.div>
 
@@ -146,7 +164,9 @@ export default function Resume() {
           transition={{ delay: 1 }}
           style={{ marginTop: 40 }}
         >
-          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>⚙️ Skills</h4>
+          <h4 style={{ fontSize: 20, color: "#00b4ff", marginBottom: 12 }}>
+            ⚙️ Skills
+          </h4>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {[
               "Python",
@@ -172,7 +192,10 @@ export default function Resume() {
             ].map((skill) => (
               <motion.span
                 key={skill}
-                whileHover={{ scale: 1.1, backgroundColor: "rgba(0,180,255,0.3)" }}
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "rgba(0,180,255,0.3)",
+                }}
                 style={{
                   background: "rgba(255,255,255,0.05)",
                   padding: "6px 12px",
@@ -198,9 +221,15 @@ export default function Resume() {
           }}
         >
           {[
-            { name: "🏆 LeetCode", link: "https://leetcode.com/u/Kunj_2803/" },
-            { name: "💻 GitHub", link: "https://github.com/kunj2803" },
-            { name: "💼 LinkedIn", link: "https://www.linkedin.com/in/kunj-desai-07717b293/" },
+            {
+              name: "🏆 LeetCode",
+              link: "https://leetcode.com/u/Prabhath1710//",
+            },
+            { name: "💻 GitHub", link: "https://github.com/Prabhath1403" },
+            {
+              name: "💼 LinkedIn",
+              link: "https://www.linkedin.com/in/prabhath-thummala-3aa690326/",
+            },
           ].map((site) => (
             <motion.a
               key={site.name}
@@ -264,8 +293,6 @@ export default function Resume() {
         >
           ⬇️ Download Resume
         </motion.a>
-
-
       </motion.div>
     </section>
   );
