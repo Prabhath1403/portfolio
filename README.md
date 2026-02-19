@@ -27,25 +27,6 @@ It showcases my work, projects, skills, and journey as a developer passionate ab
 
 ---
 
-## ⚙️ Setup Instructions
-
-To run this project locally:
-
-```bash
-# 1️⃣ Clone the repository
-git clone https://github.com/kunj2803/kunjdesai-portfolio.git
-
-# 2️⃣ Navigate to project directory
-cd kunjdesai-portfolio
-
-# 3️⃣ Install dependencies
-npm install
-
-# 4️⃣ Run development server
-npm start or npm run dev
-```
-
-Now open [http://localhost:3000](http://localhost:3000) in your browser 🚀
 
 ---
 
