@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Certificates from "./pages/Certificates";
 import Blog from "./pages/Blog";
 import Resume from "./pages/Resume";
 import About from "./pages/About";
@@ -20,7 +19,6 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<SkillNetwork />} />
-          <Route path="/certificates" element={<Certificates />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} /> {/* ✅ fixed lowercase */}

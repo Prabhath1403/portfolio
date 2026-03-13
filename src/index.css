@@ -102,10 +102,6 @@ body{
 }
 
 
-/* certificates */
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:12px}
-.cert{padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
-
 /* responsive */
 @media (max-width:900px){
   .hero-hero{flex-direction:column;align-items:center;text-align:center;padding:24px}
@@ -223,15 +219,6 @@ form h3 {
 :root {
   --accent: #004c99;
   --accent-2: #0077ff;
-}
-
-.certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-}
-.cert.card {
-  transition: all 0.3s ease;
 }
 
 .social-icon {
