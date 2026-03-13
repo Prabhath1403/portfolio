@@ -142,13 +142,13 @@ const AboutMe = () => {
                     marginBottom: "0.2rem",
                   }}
                 >
-                  <strong>S.C.E.T (Karunya University)</strong> — Coiambatore,
+                  <strong>K.I.T.S (Karunya institute of technology)</strong> — Coiambatore,
                   Tamil Nadu
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  4th Year (Pursuing) | GPA: 9.0
+                  2nd Year (Pursuing) | GPA: 7.8
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>2022 – 2026</p>
+                <p style={{ color: "rgba(255,255,255,0.7)" }}>2024 – 2028</p>
               </div>
             </motion.div>
 
@@ -193,7 +193,7 @@ const AboutMe = () => {
                   Madhapur | Percentage: 96.5%
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Completed in 2022
+                  Completed in 2024
                 </p>
               </div>
             </motion.div>
@@ -240,7 +240,7 @@ const AboutMe = () => {
                   State Board | Percentage: 94%
                 </p>
                 <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Completed in 2020
+                  Completed in 2022
                 </p>
               </div>
             </motion.div>

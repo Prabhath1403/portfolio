@@ -56,7 +56,7 @@ export default function Resume() {
               👨‍💻 THUMMALA PRABHATH
             </h3>
             <p style={{ margintop: 10, fontSize: 15, color: "#ccc" }}>
-              2th Year B.Tech — AI & Data Science | Karunya University
+              2nd Year B.Tech — AI & Data Science | Karunya University
             </p>
             <p style={{ margin: "4px 0", fontSize: 14, color: "#aaa" }}>
               📍 Karunya nagar,Coimbatore,Tamilnadu
@@ -80,7 +80,7 @@ export default function Resume() {
           >
             <strong style={{ color: "#00b4ff" }}>Professional Summary:</strong>
             <p style={{ marginTop: 6, color: "#ccc" }}>
-              2th-year B.Tech AI student experienced in ML, DL, and computer
+              2nd-year B.Tech AI student experienced in ML, DL, and computer
               vision. Skilled in Python, TensorFlow, PyTorch, and Scikit-learn.
               Passionate about building impactful AI systems and seeking
               opportunities to contribute to real-world AI projects.
@@ -115,13 +115,13 @@ export default function Resume() {
             <li>
               <strong>B.Tech in Artificial Intelligence & Data Science</strong>{" "}
               — K.I.T.S (Karunya Institute of Technology and Sciences),
-              2022–2026 <br />
-              <span style={{ color: "#aaa" }}>GPA: 9.0</span>
+              2024–2028 <br />
+              <span style={{ color: "#aaa" }}>GPA: 7.8</span>
             </li>
             <li style={{ marginTop: 8 }}>
               <strong>12th Board — Career point junior college</strong>{" "}
               (Telangana Board, 2024) <br />
-              <span style={{ color: "#aaa" }}>Percentage: 96.5%</span>
+              <span style={{ color: "#aaa" }}>Percentage: 96.4%</span>
             </li>
             <li style={{ marginTop: 8 }}>
               <strong>10th Board — Hyderabad Public School</strong>{" "}
@@ -152,8 +152,8 @@ export default function Resume() {
           >
             <li>1️⃣ Hospital Management</li>
             <li>2️⃣ Ai finacial Advisor Chatbot </li>
-            <li>3️⃣ Porfolio (In Progress)</li>
-            <li>4️⃣ EnvScope</li>
+            <li>3️⃣ Porfolio </li>
+            <li>4️⃣ Envguard</li>
           </ul>
         </motion.div>
 
