@@ -1,23 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import githubLogo from "../../public/github.png";
-import linkedinLogo from "../../public/linkedin.png";
-import gmailLogo from "../../public/gmail.png";
-import whatsappLogo from "../../public/whatsapp.png";
-import instagramLogo from "../../public/insta.png";
-import facebookLogo from "../../public/facebook.png";
-
-import "../CSS/Contact.css";
-import "../index.css";
-
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    contact: "",
-    subject: "",
-    message: "",
-  });
+  const [form, setForm] = useState({ name: "", contact: "", subject: "", message: "" });
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -27,171 +12,155 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.name || !form.contact || !form.subject || !form.message) {
-      setStatus("⚠️ Please fill in all fields.");
+    if (!form.name || !form.contact || !form.message) {
+      setStatus("⚠️ Please complete all required fields.");
       return;
     }
 
-    const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-    const isEmail = emailPattern.test(form.contact);
-    if (!isEmail && isNaN(form.contact)) {
-      setStatus("⚠️ Please enter a valid email or phone number.");
-      return;
-    }
+    const whatsappMessage = `*Portfolio Inquiry*\n\n*Name:* ${form.name}\n*Contact:* ${form.contact}\n*Subject:* ${form.subject || "Collaboration"}\n*Message:*\n${form.message}`;
+    const whatsappURL = `https://wa.me/919440073535?text=${encodeURIComponent(whatsappMessage)}`;
 
-    // Create WhatsApp message
-    const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${form.name}\n*Contact:* ${form.contact}\n*Subject:* ${form.subject}\n*Message:*\n${form.message}`;
-    
-    // WhatsApp number (without + or spaces)
-    const whatsappNumber = "919440073535";
-    
-    // Create WhatsApp URL
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    
-    // Open WhatsApp
-    window.open(whatsappURL, '_blank');
-    
-    setStatus("✅ Redirecting to WhatsApp...");
+    window.open(whatsappURL, "_blank");
+    setStatus("🚀 Redirecting to WhatsApp...");
     setForm({ name: "", contact: "", subject: "", message: "" });
   };
 
-  const quickLinks = [
-    {
-      img: githubLogo,
-      title: "GitHub",
-      link: "https://github.com/Prabhath1403",
-    },
-    {
-      img: linkedinLogo,
-      title: "LinkedIn",
-      link: "https://www.linkedin.com/in/prabhath-thummala-3aa690326/",
-    },
-    { img: gmailLogo, title: "Email", link: "prabhaththummala@gmail.com" },
-    {
-      img: whatsappLogo,
-      title: "WhatsApp",
-      link: "https://wa.me/+919440073535",
-    },
-    {
-      img: instagramLogo,
-      title: "Instagram",
-      link: "https://www.instagram.com/prabhath_chowdhary/",
-    },
-    {
-      img: facebookLogo,
-      title: "Facebook",
-      link: "",
-    },
-  ];
-
   return (
-    <section className="contact-section">
-      <motion.h1
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="contact-title"
+    <section id="contact" className="section-wrapper">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        Let’s Connect & Collaborate 🤝
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="contact-subtitle"
-      >
-        Whether it’s a new project, a collaboration, or just to say hi — I’d
-        love to hear from you!
-      </motion.p>
-
-      {/* Quick Links */}
-      <motion.div className="contact-links">
-        {quickLinks.map((item, i) => (
-          <motion.a
-            key={i}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-            whileHover={{ scale: 1.15, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 250 }}
-          >
-            <motion.img
-              src={item.img}
-              alt={item.title}
-              className="social-icon"
-              animate={{ y: [0, -6, 0] }}
-              transition={{
-                duration: 3 + i * 0.3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.a>
-        ))}
+        <span className="section-tag">// GET IN TOUCH</span>
+        <h2 className="section-title-large">
+          LET'S WORK <span className="pink-gradient-text">TOGETHER</span>
+        </h2>
       </motion.div>
 
-      {/* Contact Form */}
-      <motion.form
-        onSubmit={handleSubmit}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.9 }}
-        className="contact-form"
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="contact"
-          placeholder="Your Email or Phone"
-          value={form.contact}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={form.subject}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message..."
-          value={form.message}
-          onChange={handleChange}
-          rows="5"
-          required
-        />
-        <motion.button
-          type="submit"
-          className="contact-btn"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+      <div className="bento-grid">
+        <motion.form
+          onSubmit={handleSubmit}
+          className="bento-card col-span-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          style={{ display: "flex", flexDirection: "column", gap: 14 }}
         >
-          🚀 Send Message
-        </motion.button>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              style={{
+                width: "100%",
+                background: "#f8f9fa",
+                border: "1px solid var(--border-light)",
+                borderRadius: 12,
+                padding: "12px 16px",
+                color: "var(--text-main)",
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.92rem",
+                outline: "none",
+              }}
+            />
+            <input
+              type="text"
+              name="contact"
+              placeholder="Your Email or Phone"
+              value={form.contact}
+              onChange={handleChange}
+              required
+              style={{
+                width: "100%",
+                background: "#f8f9fa",
+                border: "1px solid var(--border-light)",
+                borderRadius: 12,
+                padding: "12px 16px",
+                color: "var(--text-main)",
+                fontFamily: "var(--font-sans)",
+                fontSize: "0.92rem",
+                outline: "none",
+              }}
+            />
+          </div>
 
-        {status && (
-          <motion.p
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="contact-status"
-          >
-            {status}
-          </motion.p>
-        )}
-      </motion.form>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject (e.g. Internship, Collaboration)"
+            value={form.subject}
+            onChange={handleChange}
+            style={{
+              width: "100%",
+              background: "#f8f9fa",
+              border: "1px solid var(--border-light)",
+              borderRadius: 12,
+              padding: "12px 16px",
+              color: "var(--text-main)",
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.92rem",
+              outline: "none",
+            }}
+          />
+
+          <textarea
+            name="message"
+            placeholder="Your Message..."
+            value={form.message}
+            onChange={handleChange}
+            rows={5}
+            required
+            style={{
+              width: "100%",
+              background: "#f8f9fa",
+              border: "1px solid var(--border-light)",
+              borderRadius: 12,
+              padding: "12px 16px",
+              color: "var(--text-main)",
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.92rem",
+              outline: "none",
+              resize: "vertical",
+            }}
+          />
+
+          <button type="submit" className="dribbble-btn-pink" style={{ alignSelf: "flex-start" }}>
+            🚀 Send Direct Message
+          </button>
+
+          {status && (
+            <div style={{ color: "var(--accent-pink)", fontWeight: 600, fontSize: "0.88rem", marginTop: 4 }}>
+              {status}
+            </div>
+          )}
+        </motion.form>
+
+        <motion.div
+          className="bento-card col-span-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", marginBottom: 16, color: "var(--text-main)" }}>
+            📍 Contact Info
+          </h3>
+          <div style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.8 }}>
+            <p><strong style={{ color: "var(--text-main)" }}>Email:</strong> prabhaththummala@gmail.com</p>
+            <p><strong style={{ color: "var(--text-main)" }}>Phone:</strong> +91 9440073535</p>
+            <p><strong style={{ color: "var(--text-main)" }}>Location:</strong> Coimbatore, Tamil Nadu / Hyderabad, Telangana</p>
+            <p style={{ marginTop: 12, color: "var(--accent-pink)", fontWeight: 600 }}>
+              🟢 Available for remote & hybrid AI/ML roles worldwide.
+            </p>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

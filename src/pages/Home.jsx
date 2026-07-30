@@ -1,189 +1,97 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../CSS/Home.css";
-import "../index.css";
 
-// 🖼️ Import Assets
-import photo from "../../public/photo.jpg";
-import githubLogo from "../../public/github.png";
-import linkedinLogo from "../../public/linkedin.png";
-import gmailLogo from "../../public/gmail.png";
-import whatsappLogo from "../../public/whatsapp.png";
-import instagramLogo from "../../public/insta.png";
-import facebookLogo from "../../public/facebook.png";
+const METRICS = [
+  { value: "1000+", label: "LeetCode Solved 🏆" },
+  { value: "5+", label: "Featured Projects 🚀" },
+  { value: "3rd Yr", label: "B.Tech AI & DS @ Karunya 🎓" },
+];
+
+const SOCIALS = [
+  { label: "GitHub", url: "https://github.com/Prabhath1403" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/prabhath-thummala-3aa690326/" },
+  { label: "Email", url: "mailto:prabhaththummala@gmail.com" },
+  { label: "WhatsApp", url: "https://wa.me/+919440073535" },
+];
 
 export default function Home() {
-  const professions = [
-    "AI Enthusiast",
-    "Machine Learning Engineer",
-    "Full Stack Developer",
-  ];
-
-  const quickLinks = [
-    {
-      img: githubLogo,
-      title: "GitHub",
-      link: "https://github.com/Prabhath1403",
-    },
-    {
-      img: linkedinLogo,
-      title: "LinkedIn",
-      link: "https://www.linkedin.com/in/prabhath-thummala-3aa690326/",
-    },
-    {
-      img: gmailLogo,
-      title: "Email",
-      link: "mailto:prabhaththummala@gmail.com",
-    },
-    {
-      img: whatsappLogo,
-      title: "WhatsApp",
-      link: "https://wa.me/+919440073535",
-    },
-    {
-      img: instagramLogo,
-      title: "Instagram",
-      link: "https://www.instagram.com/prabhath_chowdhary/",
-    },
-    {
-      img: facebookLogo,
-      title: "Facebook",
-      link: "https://www.facebook.com/kunj.desai.222608",
-    },
-  ];
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section className="home-section">
-      {/* Typing Effect Styles */}
-      <style>
-        {`
-          @keyframes typing { from { width: 0; } to { width: 100%; } }
-          @keyframes blink { 50% { border-color: transparent; } }
-        `}
-      </style>
-
-      {/* Top Section: Photo + Info */}
-      <div className="home-top">
-        {/* Left: Glowing Photo */}
+    <section id="hero" className="hero-section">
+      <div className="hero-grid-container">
+        {/* Left Column: Info & Headline */}
         <motion.div
-          initial={{ opacity: 0, x: -60 }}
+          className="hero-text-content"
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="photo-container"
+          transition={{ duration: 0.6 }}
         >
-          <motion.div
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="photo-ring"
-          />
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="photo-frame"
-          >
-            <motion.img
-              src={photo}
-              alt="Prabhath Thummala"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="profile-photo"
-            />
-          </motion.div>
-        </motion.div>
-
-        {/* Right: Info Section */}
-        <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="home-info"
-        >
-          <h1 className="home-title">
-            Hi, I’m{" "}
-            <motion.span
-              animate={{ backgroundPositionX: ["0%", "200%"] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              className="home-name"
-            >
-              Prabhath Thummala
-            </motion.span>
+          <span className="section-tag">// PORTFOLIO 2026</span>
+          
+          <h1 className="hero-name-title">
+            Hi, I'm <span className="pink-gradient-text">Prabhath Thummala</span>
           </h1>
 
-          {/* Typing Animated Text */}
-          <p className="typing-effect">
-            Artificial Intelligence Engineer | Full Stack Developer | Tech
-            Explorer
+          <h2 className="hero-role-title">
+            AI & Machine Learning Engineer <span style={{ fontWeight: 400, color: "var(--text-muted)" }}>/ Full-Stack Developer</span>
+          </h2>
+
+          <p className="hero-subtitle">
+            Designing intelligent algorithms, computer vision pipelines, and self-hosted cloud applications with PyTorch, TensorFlow, FastAPI, and React.
           </p>
 
-          {/* Profession Tags */}
-          <motion.div className="profession-tags">
-            {professions.map((role, i) => (
-              <motion.div
-                key={i}
-                whileHover={{
-                  scale: 1.05,
-                  background:
-                    "linear-gradient(90deg,var(--accent),var(--accent-2))",
-                }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="profession-tag"
-              >
-                {role}
-              </motion.div>
+          {/* Metric Cards */}
+          <div className="hero-metrics-row">
+            {METRICS.map((m, i) => (
+              <div key={i} className="metric-card">
+                <div className="metric-number">{m.value}</div>
+                <div className="metric-label">{m.label}</div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          {/* Info Cards */}
-          <motion.div className="info-cards">
-            {[
-              {
-                label: "📍 Location",
-                value: "Mudigubba,Anantapur ,Andhara Pradesh",
-              },
-              { label: "💼 Expertise", value: "AI/ML, Problem Solving" },
-              { label: "📧 Contact", value: "prabhaththummala@gmail.com" },
-            ].map((info, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -4, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 250 }}
-                className="info-card"
-              >
-                <strong>{info.label}</strong>
-                <p>{info.value}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+          {/* CTA Actions */}
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+            <button className="dribbble-btn-pink" onClick={() => scrollTo("projects")}>
+              🚀 View Projects
+            </button>
+            <button className="dribbble-btn-dark" onClick={() => scrollTo("contact")}>
+              ✉️ Contact Me
+            </button>
+
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {SOCIALS.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="tech-chip"
+                  style={{ textDecoration: "none" }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Right Column: Prominent Profile Picture */}
+        <motion.div
+          className="hero-image-content"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="profile-img-frame">
+            <img src="/photo.jpg" alt="Prabhath Thummala" />
+          </div>
         </motion.div>
       </div>
-
-      {/* Bottom Quick Links */}
-      <motion.div className="quick-links">
-        <h2 className="quick-links-title">Connect with me</h2>
-        <div className="quick-links-list">
-          {quickLinks.map((item, i) => (
-            <motion.a
-              key={i}
-              href={item.link}
-              title={item.title}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.15, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 250 }}
-            >
-              <motion.img
-                src={item.img}
-                alt={item.title}
-                whileHover={{
-                  filter: "drop-shadow(0 0 15px var(--accent)) brightness(1.2)",
-                }}
-                className="quick-link-img"
-              />
-            </motion.a>
-          ))}
-        </div>
-      </motion.div>
     </section>
   );
 }

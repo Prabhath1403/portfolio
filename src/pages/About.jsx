@@ -1,254 +1,90 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUniversity, FaSchool, FaGraduationCap } from "react-icons/fa";
 
-const AboutMe = () => {
+const EDUCATION = [
+  {
+    title: "B.Tech in Artificial Intelligence & Data Science",
+    school: "Karunya Institute of Technology and Sciences",
+    detail: "3rd Year (Pursuing) • GPA: 7.8/10",
+    year: "2024 – 2028",
+  },
+  {
+    title: "Higher Secondary (12th Grade)",
+    school: "Career Point Junior College, Hyderabad",
+    detail: "Percentage: 96.5%",
+    year: "2024",
+  },
+  {
+    title: "Secondary Education (10th Grade)",
+    school: "Hyderabad Public School",
+    detail: "State Board • Percentage: 94%",
+    year: "2022",
+  },
+];
+
+export default function About() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "radial-gradient(circle at top, #0d0d0d, #000)",
-        color: "white",
-        padding: "3rem 1rem",
-      }}
-    >
-      {/* --- About Me + Education Section --- */}
+    <section id="about" className="section-wrapper">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        style={{
-          width: "100%",
-          maxWidth: "1100px",
-          textAlign: "left",
-          marginTop: "1rem",
-          lineHeight: 1.8,
-          background: "rgba(255,255,255,0.04)",
-          padding: "3rem 3.5rem",
-          borderRadius: "18px",
-          boxShadow: "0 0 25px rgba(0,255,200,0.08)",
-          backdropFilter: "blur(10px)",
-        }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        {/* --- Header --- */}
-        <h2
-          style={{
-            fontSize: "1.9rem",
-            marginBottom: "1.2rem",
-            background:
-              "linear-gradient(90deg, var(--accent), var(--accent-2))",
-            WebkitBackgroundClip: "text",
-            color: "transparent",
-          }}
-        >
-          About Me
+        <span className="section-tag">// BIOGRAPHY & BACKGROUND</span>
+        <h2 className="section-title-large">
+          About <span className="pink-gradient-text">Me</span>
         </h2>
+      </motion.div>
 
-        {/* --- Description --- */}
-        <p
-          style={{
-            fontSize: "1.1rem",
-            color: "rgba(255,255,255,0.85)",
-            marginBottom: "1rem",
-          }}
-        >
-          Hi, I’m <strong>Prabhath Thummala</strong> — an aspiring{" "}
-          <strong>Artificial Intelligence Engineer</strong> and{" "}
-          <strong>Machine Learning enthusiast</strong> who loves turning ideas
-          into intelligent systems. I’m deeply fascinated by how data and
-          algorithms can shape the future of healthcare, automation, and
-          creativity in technology.
-        </p>
-
-        <p style={{ fontSize: "1.1rem", color: "rgba(255,255,255,0.8)" }}>
-          Beyond code, I enjoy exploring design, experimenting with motion and
-          interaction, and finding ways to blend{" "}
-          <strong>artistic creativity</strong> with{" "}
-          <strong>technical precision</strong>. My goal is to build solutions
-          that not only perform — but also inspire.
-        </p>
-
-        <p>
-          2th-year B.Tech AI Engineering student with hands-on experience in ML
-          & DL Projects. Proficient in Python, scikitlearn,pytorch,tensorflow
-          and data preprocessing. Seeking internship opportunities to apply
-          skills and contribute to impactful AI solutions.
-        </p>
-
-        {/* --- Education Section --- */}
+      <div className="bento-grid">
+        {/* Bio Card */}
         <motion.div
+          className="bento-card col-span-12"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          style={{ marginTop: "3rem" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <h3
-            style={{
-              fontSize: "1.6rem",
-              marginBottom: "1.5rem",
-              background:
-                "linear-gradient(90deg, var(--accent), var(--accent-2))",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            Education
+          <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", marginBottom: 12, color: "var(--text-main)" }}>
+            Engineering Intelligence with Technical Precision
           </h3>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: 12 }}>
+            I'm <strong style={{ color: "var(--text-main)" }}>Prabhath Thummala</strong>, a 3rd-year Artificial Intelligence & Data Science B.Tech student dedicated to building high-performance ML models, computer vision systems, and modern full-stack web applications.
+          </p>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.95rem" }}>
+            My technical focus encompasses PyTorch, TensorFlow, FastAPI, and React — spanning medical AI diagnosis, cybersecurity tools, and self-hosted cloud infrastructure.
+          </p>
+        </motion.div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.2rem",
-            }}
-          >
-            {/* --- Education Card 1 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaUniversity size={40} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  B.Tech in Artificial Intelligence and Data Science
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>K.I.T.S (Karunya institute of technology)</strong> — Coiambatore,
-                  Tamil Nadu
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  2nd Year (Pursuing) | GPA: 7.8
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>2024 – 2028</p>
+        {/* Education Timeline Cards */}
+        <motion.div
+          className="bento-card col-span-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", marginBottom: 16, color: "var(--text-main)" }}>
+            🎓 Academic Journey
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+            {EDUCATION.map((edu, i) => (
+              <div
+                key={i}
+                style={{
+                  borderLeft: "3px solid var(--accent-pink)",
+                  paddingLeft: 16,
+                }}
+              >
+                <div style={{ fontWeight: 700, fontSize: "1rem", color: "var(--text-main)" }}>{edu.title}</div>
+                <div style={{ color: "var(--accent-pink)", fontSize: "0.88rem", margin: "4px 0", fontWeight: 600 }}>{edu.school}</div>
+                <div style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>{edu.detail} ({edu.year})</div>
               </div>
-            </motion.div>
-
-            {/* --- Education Card 2 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaGraduationCap size={38} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  Higher Secondary Education (12th Grade)
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>Carear Point</strong> — Hyderabad , Telangana
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Madhapur | Percentage: 96.5%
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Completed in 2024
-                </p>
-              </div>
-            </motion.div>
-
-            {/* --- Education Card 3 --- */}
-            <motion.div
-              whileHover={{
-                scale: 1.02,
-                boxShadow: "0 0 25px rgba(0,255,200,0.15)",
-              }}
-              transition={{ duration: 0.3 }}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                borderRadius: "14px",
-                padding: "1.5rem 2rem",
-                border: "1px solid rgba(255,255,255,0.08)",
-                boxShadow: "0 0 15px rgba(0,255,200,0.05)",
-                display: "flex",
-                alignItems: "center",
-                gap: "1.2rem",
-              }}
-            >
-              <FaSchool size={36} color="var(--accent)" />
-              <div>
-                <h4
-                  style={{
-                    color: "var(--accent)",
-                    marginBottom: "0.4rem",
-                    fontSize: "1.25rem",
-                  }}
-                >
-                  Secondary Education (10th Grade)
-                </h4>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.85)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  <strong>Hydearabad Public School</strong> — Anantapur, Andhra
-                  Pradesh
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  State Board | Percentage: 94%
-                </p>
-                <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                  Completed in 2022
-                </p>
-              </div>
-            </motion.div>
+            ))}
           </div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    </section>
   );
-};
-
-export default AboutMe;
+}
