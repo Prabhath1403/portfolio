@@ -41,7 +41,7 @@ export default function Home() {
           </h2>
 
           <p className="hero-subtitle">
-            Designing intelligent algorithms, computer vision pipelines, and self-hosted cloud applications with PyTorch, TensorFlow, FastAPI, and React.
+            Building advanced Deep Learning models, computer vision pipelines, and full-stack applications with PyTorch, TensorFlow, Node.js, JavaScript, FastAPI, and React.
           </p>
 
           {/* Metric Cards */}

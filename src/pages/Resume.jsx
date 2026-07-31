@@ -31,7 +31,7 @@ export default function Resume() {
             AI & ML Engineer / Full-Stack Developer
           </p>
           <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7, marginBottom: 20 }}>
-            3rd-year B.Tech AI student focusing on PyTorch, TensorFlow, Computer Vision, and LLM tool calling. Proven track record of building high-performance models and cloud services.
+            3rd-year B.Tech AI student focusing on Deep Learning (PyTorch, TensorFlow), Node.js, JavaScript, Computer Vision, and LLM tool calling. Proven track record of building high-performance models and web services.
           </p>
 
           <a href="/resume.pdf" download className="dribbble-btn-pink">

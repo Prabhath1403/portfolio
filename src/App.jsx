@@ -20,7 +20,7 @@ export default function App() {
         <Contact />
       </main>
       <footer className="dribbble-footer">
-        © {new Date().getFullYear()} Prabhath Thummala — Inspired by Dribbble • Built with React & Framer Motion
+        © {new Date().getFullYear()} Prabhath Thummala • Built with React & Framer Motion
       </footer>
     </div>
   );

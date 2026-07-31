@@ -4,22 +4,22 @@ import { motion } from "framer-motion";
 const SKILL_GROUPS = [
   {
     category: "🔤 Programming Languages",
-    skills: ["Python 3.11", "C", "C++", "Java", "JavaScript (ES6+)"],
+    skills: ["Python 3.11", "JavaScript (ES6+)", "C", "C++", "Java", "TypeScript"],
     span: "col-span-6",
   },
   {
-    category: "🤖 AI & Machine Learning",
-    skills: ["PyTorch", "TensorFlow", "OpenCV", "YOLOv8", "LightGBM", "Scikit-Learn", "Explainable AI (XAI)", "NLP"],
+    category: "🤖 AI, Deep Learning & ML",
+    skills: ["Deep Learning", "PyTorch", "TensorFlow", "CNNs & Transformers", "OpenCV", "YOLOv8", "LightGBM", "Scikit-Learn", "Explainable AI (XAI)", "NLP"],
     span: "col-span-6",
   },
   {
-    category: "🌐 Web & Mobile Stack",
-    skills: ["React 18", "FastAPI", "Flutter", "HTML5", "CSS3", "REST APIs"],
+    category: "🌐 Web & Backend Stack",
+    skills: ["JavaScript", "Node.js", "Express.js", "React 18", "FastAPI", "Flutter", "HTML5 & CSS3", "REST APIs"],
     span: "col-span-6",
   },
   {
     category: "🛠️ Databases & DevOps",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker", "Git/GitHub", "Ubuntu Linux"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Docker", "Git / GitHub", "Ubuntu Linux"],
     span: "col-span-6",
   },
 ];

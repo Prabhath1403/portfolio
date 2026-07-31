@@ -50,10 +50,10 @@ export default function About() {
             Engineering Intelligence with Technical Precision
           </h3>
           <p style={{ color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.95rem", marginBottom: 12 }}>
-            I'm <strong style={{ color: "var(--text-main)" }}>Prabhath Thummala</strong>, a 3rd-year Artificial Intelligence & Data Science B.Tech student dedicated to building high-performance ML models, computer vision systems, and modern full-stack web applications.
+            I'm <strong style={{ color: "var(--text-main)" }}>Prabhath Thummala</strong>, a 3rd-year Artificial Intelligence & Data Science B.Tech student dedicated to building high-performance Deep Learning models, computer vision systems, and modern full-stack web applications.
           </p>
           <p style={{ color: "var(--text-muted)", lineHeight: 1.8, fontSize: "0.95rem" }}>
-            My technical focus encompasses PyTorch, TensorFlow, FastAPI, and React — spanning medical AI diagnosis, cybersecurity tools, and self-hosted cloud infrastructure.
+            My technical focus encompasses PyTorch, TensorFlow, Deep Learning (CNNs, Transformers), Node.js, JavaScript, FastAPI, and React — spanning medical AI diagnosis, cybersecurity tools, and self-hosted cloud infrastructure.
           </p>
         </motion.div>
 
