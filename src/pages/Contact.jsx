@@ -51,7 +51,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           style={{ display: "flex", flexDirection: "column", gap: 14 }}
         >
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
             <input
               type="text"
               name="name"

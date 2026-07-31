@@ -1,5 +1,5 @@
 /* ===================================================================
-   DRIBBBLE-INSPIRED DESIGN SYSTEM — Clean Light Theme & Dribbble Aesthetics
+   DRIBBBLE-INSPIRED DESIGN SYSTEM — Clean Light Theme & Mobile Responsive
    Portfolio of Prabhath Thummala
    =================================================================== */
 
@@ -42,12 +42,15 @@ html {
   color: var(--text-main);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
   background: var(--bg-main);
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
 }
 
 /* Ambient background */
@@ -83,6 +86,8 @@ body::before {
   flex-direction: column;
   position: relative;
   z-index: 1;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -101,9 +106,9 @@ body::before {
   z-index: 100;
   width: 92%;
   max-width: 960px;
-  padding: 10px 24px;
+  padding: 10px 20px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border-light);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -183,6 +188,7 @@ body::before {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-cta-btn:hover {
@@ -191,8 +197,67 @@ body::before {
   transform: translateY(-1px);
 }
 
+.nav-mobile-toggle {
+  display: none;
+  background: #f3f3f4;
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* Mobile Menu Overlay Drawer */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 90%;
+  max-width: 400px;
+}
+
+.mobile-menu-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 16px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-menu-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:active {
+  background: #f3f3f4;
+  color: var(--accent-pink);
+}
+
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-mobile-toggle { display: flex; }
 }
 
 /* Sections */
@@ -325,8 +390,10 @@ body::before {
 .dribbble-btn-pink {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 10px 22px;
+  min-height: 44px;
   border-radius: 9999px;
   background: var(--accent-pink);
   color: #fff;
@@ -348,8 +415,10 @@ body::before {
 .dribbble-btn-dark {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 10px 22px;
+  min-height: 44px;
   border-radius: 9999px;
   background: var(--text-main);
   color: #fff;
@@ -370,8 +439,10 @@ body::before {
 .dribbble-btn-ghost {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 10px 22px;
+  min-height: 44px;
   border-radius: 9999px;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
@@ -422,16 +493,32 @@ body::before {
 .col-span-5 { grid-column: span 5; }
 .col-span-4 { grid-column: span 4; }
 
+/* Responsive Adjustments for Mobile */
 @media (max-width: 900px) {
   .hero-grid-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 28px;
   }
   .hero-subtitle { margin: 0 auto 24px; }
   .hero-metrics-row { justify-content: center; }
   .col-span-8, .col-span-7, .col-span-6, .col-span-5, .col-span-4 {
     grid-column: span 12;
   }
+}
+
+@media (max-width: 600px) {
+  .main-container { padding: 0 16px; }
+  .section-wrapper { padding: 60px 0 30px; }
+  .bento-card { padding: 20px; border-radius: 14px; }
+  .hero-name-title { font-size: 1.8rem; }
+  .hero-role-title { font-size: 1.05rem; }
+  .section-title-large { font-size: 1.7rem; }
+  .profile-img-frame { width: 240px; height: 260px; }
+  .nav-brand-text { display: none; } /* Show logo monogram on small phone screens */
+  .dribbble-nav { width: 95%; padding: 8px 14px; }
+  .metric-card { min-width: 120px; padding: 10px 14px; }
+  .metric-number { font-size: 1.2rem; }
 }
 
 /* Dribbble Shot Card */
@@ -485,7 +572,7 @@ body::before {
 /* Footer */
 .dribbble-footer {
   text-align: center;
-  padding: 32px 24px;
+  padding: 32px 16px;
   border-top: 1px solid var(--border-light);
   margin-top: 60px;
   color: var(--text-muted);
