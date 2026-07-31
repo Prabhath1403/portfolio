@@ -20,10 +20,10 @@ export default function Contact() {
     const emailSubject = `[Portfolio Contact] ${form.subject || "Collaboration Inquiry"}`;
     const emailBody = `Hello Prabhath,\n\nName: ${form.name}\nContact Email/Phone: ${form.contact}\n\nMessage:\n${form.message}`;
 
-    const mailtoURL = `mailto:prabhaththummala@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=prabhaththummala@gmail.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
-    window.location.href = mailtoURL;
-    setStatus("✉️ Opening your email client with your pre-filled message...");
+    window.open(gmailURL, "_blank");
+    setStatus("🚀 Redirecting to Gmail web compose with your pre-filled message...");
     setForm({ name: "", contact: "", subject: "", message: "" });
   };
 

@@ -22,7 +22,9 @@ export default function Navbar() {
       </div>
 
       <a
-        href="mailto:prabhaththummala@gmail.com?subject=Collaboration%20Inquiry"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhaththummala@gmail.com&su=Collaboration%20Inquiry"
+        target="_blank"
+        rel="noreferrer"
         className="nav-cta-btn"
       >
         ✉️ Hire Me

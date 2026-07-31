@@ -59,7 +59,12 @@ export default function Home() {
             <button className="dribbble-btn-pink" onClick={() => scrollTo("projects")}>
               🚀 View Projects
             </button>
-            <a href="mailto:prabhaththummala@gmail.com?subject=Collaboration%20Inquiry" className="dribbble-btn-dark">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=prabhaththummala@gmail.com&su=Collaboration%20Inquiry"
+              target="_blank"
+              rel="noreferrer"
+              className="dribbble-btn-dark"
+            >
               ✉️ Email Me
             </a>
 
