@@ -17,11 +17,13 @@ export default function Contact() {
       return;
     }
 
-    const whatsappMessage = `*Portfolio Inquiry*\n\n*Name:* ${form.name}\n*Contact:* ${form.contact}\n*Subject:* ${form.subject || "Collaboration"}\n*Message:*\n${form.message}`;
-    const whatsappURL = `https://wa.me/919440073535?text=${encodeURIComponent(whatsappMessage)}`;
+    const emailSubject = `[Portfolio Contact] ${form.subject || "Collaboration Inquiry"}`;
+    const emailBody = `Hello Prabhath,\n\nName: ${form.name}\nContact Email/Phone: ${form.contact}\n\nMessage:\n${form.message}`;
 
-    window.open(whatsappURL, "_blank");
-    setStatus("🚀 Redirecting to WhatsApp...");
+    const mailtoURL = `mailto:prabhaththummala@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    window.location.href = mailtoURL;
+    setStatus("✉️ Opening your email client with your pre-filled message...");
     setForm({ name: "", contact: "", subject: "", message: "" });
   };
 
@@ -131,7 +133,7 @@ export default function Contact() {
           />
 
           <button type="submit" className="dribbble-btn-pink" style={{ alignSelf: "flex-start" }}>
-            🚀 Send Direct Message
+            ✉️ Send via Email
           </button>
 
           {status && (
@@ -152,7 +154,12 @@ export default function Contact() {
             📍 Contact Info
           </h3>
           <div style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.8 }}>
-            <p><strong style={{ color: "var(--text-main)" }}>Email:</strong> prabhaththummala@gmail.com</p>
+            <p>
+              <strong style={{ color: "var(--text-main)" }}>Email:</strong>{" "}
+              <a href="mailto:prabhaththummala@gmail.com" style={{ color: "var(--accent-pink)", textDecoration: "none" }}>
+                prabhaththummala@gmail.com
+              </a>
+            </p>
             <p><strong style={{ color: "var(--text-main)" }}>Phone:</strong> +91 9440073535</p>
             <p><strong style={{ color: "var(--text-main)" }}>Location:</strong> Coimbatore, Tamil Nadu / Hyderabad, Telangana</p>
             <p style={{ marginTop: 12, color: "var(--accent-pink)", fontWeight: 600 }}>

@@ -59,9 +59,9 @@ export default function Home() {
             <button className="dribbble-btn-pink" onClick={() => scrollTo("projects")}>
               🚀 View Projects
             </button>
-            <button className="dribbble-btn-dark" onClick={() => scrollTo("contact")}>
-              ✉️ Contact Me
-            </button>
+            <a href="mailto:prabhaththummala@gmail.com?subject=Collaboration%20Inquiry" className="dribbble-btn-dark">
+              ✉️ Email Me
+            </a>
 
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {SOCIALS.map((s) => (

@@ -21,9 +21,12 @@ export default function Navbar() {
         <button className="nav-link-btn" onClick={() => scrollTo("contact")}>Contact</button>
       </div>
 
-      <button className="nav-cta-btn" onClick={() => scrollTo("contact")}>
+      <a
+        href="mailto:prabhaththummala@gmail.com?subject=Collaboration%20Inquiry"
+        className="nav-cta-btn"
+      >
         ✉️ Hire Me
-      </button>
+      </a>
     </nav>
   );
 }
